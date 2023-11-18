@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+<style>
+    body{
+        background-image: linear-gradient(to bottom,#E0DDDD, #F5F5F5);
+        height: 100%;
+        overflow: hidden;
+}
+    .janela{
+        width: 700px;
+        height: 550px;
+}
+    .janela-g{
+        width: 600px;
+        height: 400px;
+    }
+    .fundo-janela{
+        display: flex;
+        justify-content: center;
+        margin-top: -130px;
+}   
+    .fundo-graficos{
+        display: flex;
+        justify-content: center;
+        margin-top: -370px;
+    }
+    .logofortes{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 40px;
+        margin-top: 10px;
+}
+    #salvar{
+        display: flex;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+}
+    #pessoas{
+        display: flex;
+        z-index: 1;
+        width: 80px;
+        height: 80px;
+    }
+    .conjunto1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 150px;
+        margin-top: 8px;
+
+}
+    .voltar{
+        width: 70px;
+        height: 70px;
+}
+    #titulo-janela{
+        background-color: #D9D9D9;
+        width: 420px;
+        height: 60px;
+        border: 1px solid #CDCCCC;
+        border-radius: 10px;
+        box-shadow: inset 0px 2px 4px #7a7878;   
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+    .titulo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        margin-right: -50px;
+        margin-top: -5px;
+}
+    #data-janela{
+        background-color: #D9D9D9;
+        width: 180px;
+        height: 50px;
+        border: 1px solid #CDCCCC;
+        border-radius: 10px;
+        box-shadow: inset 0px 2px 4px #7a7878;   
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+    a{
+        z-index: 1;
+    }
+    .vamo{
+        width: 10px;
+    }
+    .centro{
+        display: flex;
+        justify-content: center;
+    }
+    .info{
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+        margin-top: -390px;
+    }
+    .fonte{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+    }
+    .graficos{
+        z-index: 4;
+        width: 100px;
+        height: 100px;
+    }
+    .cafe{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-right: 2px solid black;
+        padding:  5px 10px;
+        height: 370px
+    }
+    .almoco{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 380px;
+    }
+    .janta{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        border-left: 2px solid black;
+        height: 380px;
+    }
+    .p-u{
+        display: flex;
+        width: 70px;
+        height: 50px;
+    }
+    .total{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    button{
+        width: 45px;
+        height: 20px;
+    }
+    .oba{
+        background-color: #85B5A8;
+        width: 128px;
+        height:50px;
+        display: flex;
+        justify-content: center;
+        border-radius: 25px;
+        box-shadow: inset 0px 2px 4px #919090; 
+    }
+    .editar{
+        padding-left: 45px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .editar1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .editar2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+    }
+    .icone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3px;
+    }
+    .topo{
+        display: flex;
+        justify-content: space-between;
+    }
+    .icones{
+        margin-top: -100px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .fundinho{
+        margin-top: -40px;
+        z-index: -1;
+    }
+    </style>
+    <div class="topo">
+    <img class="logofortes" src="/imagens adm obras/image 1 (1).png" alt="logo da Fortes" width="166px" height="75px">
+    <div class="icone">
+        <img class="homem" src="/imagens alojamento/profile picture of man in green shirt and orange hat (1).png" alt="foto icone" width="150px" height="65px">
+        <img class="fundinho" src="/imagens alojamento/Rectangle 13.png" alt="fundo" width="56px" height="142px">
+        <div class="icones">
+        <a href="index.html"><img class="logout" src="/imagens alojamento/Logout.png" alt="logout" width="31px" height="41px"></a>
+    </div>
+    </div>
+</div>
+    <div class="titulo">
+        <p id="titulo-janela">Alojamento - 1</p>
+        <a href="alojamento.html"><img class="voltar" src="/imagens adm relatorio/Group 26.png" alt="botao voltar"></a>
+    </div>
+    <div class="conjunto1">
+        <img id="salvar" onclick="salvar()" src="/imagens adm relatorio/Group 27.png" alt="botao de salvar">
+        <p id="data-janela"></p>
+        <img id="pessoas" src="/imagens adm relatorio/Group 16.png" alt="quantidade de trabalhadores">
+    </div>
+    <div class="fundo-janela">
+        <img class="janela" src="/imagens alojamento/Rectangle 14.png" alt="janela do alojamento">
+    </div>
+    
+    <div class="fundo-graficos">
+        <img class="janela-g" src="/imagens adm relatorio/Rectangle 21.png" alt="janela dos graficos">
+    </div>
+    
+<div class="centro">
+    <div class="info">
+        <div class="editar1">
+            <div class="cafe">
+                <p class="fonte">Café</p>
+                <img class="quantidade" width="90px" src="/imagens adm relatorio/Group 17.png" alt="quantidade de trabalhadores que vão comer">
+                <div class="graficos">
+                <canvas id="grafico"></canvas>
+                </div>
+                <img class="p-u" src="/imagens adm relatorio/Group 28.png" alt="preço unitario">
+                <div class="oba">
+                    <p id="valortotal"></p>
+                </div>
+        </div>
+        </div>
+        <!-- <div class="vertical"></div> -->
+        <div class="almoco">
+            <div class="editar2">
+                <p class="fonte">Almoço</p>
+                <img class="quantidade"  width="90px" src="/imagens adm relatorio/Group 17.png" alt="quantidade de trabalhadores que vão comer">
+                <div class="graficos">
+                <canvas id="grafico2"></canvas>
+                </div>
+                <img class="p-u" src="/imagens adm relatorio/Group 28.png" alt="preço unitario">
+                <div class="oba">
+                    <p id ="valortotal2"></p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="vertical"></div>  -->
+        <div class="janta">
+            <div class="editar">
+                <p class="fonte">Janta</p>
+                <img class="quantidade" width="90px" src="/imagens adm relatorio/Group 17.png" alt="quantidade de trabalhadores que vão comer">
+                <div class="graficos">
+                <canvas id="grafico3"></canvas>
+                </div>
+                <img class="p-u" src="/imagens adm relatorio/Group 28.png" alt="preço unitario">
+                <div class="oba">
+                    <p id="valortotal3"></p>
+            </div>
+            </div> 
+        </div>
+    </div>
+</div>
+    <script>
+        const teste = document.getElementById('grafico');
+      
+      new Chart(teste, {
+        type: 'doughnut',
+        data: {
+          labels: ['comeu', 'não comeu'],
+          datasets: [{
+            label: 'Relatorio',
+            data: [240, 60],
+            backgroundColor: [ 'rgb(90, 90, 90)',
+        'rgb(120, 120, 120)'],
+            borderWidth: 1,
+          }]
+        },
+        options: {
+      plugins: {
+          legend: {
+              display: false
+          },
+      }
+    }
+      });
+      const teste2 = document.getElementById('grafico2');
+    
+      new Chart(teste2, {
+        type: 'doughnut',
+        data: {
+          labels: ['comeu', 'não comeu'],
+          datasets: [{
+            label: 'Relatorio',
+            data: [240, 60],
+            backgroundColor: [ 'rgb(90, 90, 90)',
+        'rgb(120, 120, 120)'],
+            borderWidth: 1,
+          }]
+        },
+        options: {
+      plugins: {
+          legend: {
+              display: false
+          },
+      }
+    }
+      });
+      const teste3 = document.getElementById('grafico3');
+    
+      new Chart(teste3, {
+        type: 'doughnut',
+        data: {
+          labels: ['comeu', 'não comeu'],
+          datasets: [{
+            label: 'Relatorio',
+            data: [240, 60],
+            backgroundColor: [ 'rgb(90, 90, 90)',
+        'rgb(120, 120, 120)'],
+            borderWidth: 1,
+          }]
+        },
+        options: {
+      plugins: {
+          legend: {
+              display: false
+          },
+      }
+    }
+      });
+
+
+      
+    </script>
+    
+</body>
+</html>

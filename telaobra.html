@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras</title>
+</head>
+<body>
+    <div class="fundo">
+        <style>
+            body{
+                background-image: linear-gradient(to bottom,#E0DDDD, #F5F5F5);
+                overflow: hidden;
+            }
+            body::-webkit-scrollbar{
+                overflow: hidden;
+            }
+        </style>
+    </div>
+    <div class="deco_adm">
+        <style>
+            .logofortes{
+                display: flex;
+                justify-content: space-around;
+                margin-left: 40px;
+                margin-top: 40px;
+            }
+            .linhaobras{
+                display: flex;
+                justify-content: center;
+                width: 1550px;
+                margin-left: -10px;
+                margin-top: 140px;
+            }
+            .textobras{
+                display: flex;
+                justify-content: center;
+                margin-top: -55px;
+                font-size: 2em;
+                letter-spacing: 1px;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+        </style>
+        <img class="logofortes" src="/imagens adm obras/image 1 (1).png" alt="logo da fortes engenharia">
+        <img class="linhaobras" src="/imagens adm obras/Group 1.png" alt="decoração indicando as obras">
+        <p class="textobras">Obras</p>
+    </div>
+    <div class="imagensobras">
+    <div class="imagemcoluna1">
+        <div class="grupofonteimagem">
+        <a href="alojamento.html"><img class="img1" src="/imagens adm obras/Rectangle 3.png" alt="imagem de ponte"></a>
+        <p>Prédio Sul</p>
+        <a href="alojamento.html"><img class="img2" src="/imagens adm obras/Rectangle 6.png"></a>
+        <p>Ponte Norte</p>
+        <a href="alojamento.html"><img class="img3" src="/imagens adm obras/Rectangle 7.png"></a>
+        <p>Ponte Sul</p>
+    </div>
+    </div>    
+    <div class="imagemcoluna2">
+        <div class="grupofonteimagem">
+        <a href="alojamento.html"><img class="img4" src="/imagens adm obras/Rectangle 8.png"></a>
+        <p>Prédio Leste</p>
+        <a href="alojamento.html"><img class="img5" src="/imagens adm obras/Rectangle 9.png"></a>
+        <p>Prédio Oeste</p>
+        <a href="alojamento.html"><img class="img6" src="/imagens adm obras/Rectangle 10.png"></a>
+        <p>Ponte Oeste</p>
+    </div>
+    </div>
+        <style>
+            .imagemcoluna1{
+                display: flex;
+                flex-direction:column;
+                gap: 40px;
+            }
+            .imagemcoluna2{
+                display: flex;
+                flex-direction: column;
+                gap: 44px;
+            }
+            .imagensobras{
+                display: flex;
+                height: 400px;
+                justify-content: space-around;
+                overflow: hidden;
+                scrollbar-gutter: stable both-edges;
+            }
+            .imagensobras:active,
+            .imagensobras:hover,
+            .imagensobras:focus{
+            overflow-y: scroll;
+            }
+            .grupofonteimagem{
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 1.7em;
+            }
+        </style>
+    </div>
+</body>
+</html>
